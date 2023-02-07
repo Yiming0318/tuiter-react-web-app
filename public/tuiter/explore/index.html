@@ -3,113 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <title>Explore</title>
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"/>
   <link href="index.css"
         rel="stylesheet"/>
-  <link rel="stylesheet" href="../styles.css">
-  <!--  Get the search icon in the search bar-->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        rel="stylesheet">
 </head>
+<body>
+  <div class="container">
+    <!--create the table with three main cols:
+    navigation sidebar, main content, who to follow sidebar-->
+<!--    Resize Idea:-->
+<!--    small window 2 + 10 + 0-->
+<!--    medium window 2 + 10 + 0-->
+<!--    large window 1 + 7 + 4-->
+<!--    extra large & extra extra lagre 2 + 6 + 4-->
+    <div class="row">
+      <!--create the left side navigation bar-->
+      <div class="col-sm-2 col-md-2 col-lg-1 col-xl-2 pt-2">
+        <div class="list-group mb-3">
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fab fa-twitter wd-tuitter-blue"></i>
+          </a>
 
-<body class="wd-background-color">
-<!--Search input field-->
-<div class="wd-border">
-  <div class="wd-flex-container-around">
-    <span><button type="submit"><i class="fa fa-search"></i></button></span>
-    <input class="wd-search-input" type="text" placeholder="Search Tuiter"/>
-    <a class="wd-search-gear-icon" href="explore-settings.html">&#x2699;</a>
-  </div>
-  <br><br>
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fa fa-home wd-hollow"></i>
+            <span class="d-none d-xl-inline">Home</span>
+          </a>
 
-  <!--Labeled hyperlinks-->
-  <div class="wd-row">
-    <div class="wd-col-one-sixth-page">
-      <a href="" class="wd-highlighted-font-color"><span>For you</span></a>
+          <a href="#" class="list-group-item list-group-item-action active override-nav-sidebar-bs">
+            <i class="fa fa-hashtag"></i>
+            <span class="d-none d-xl-inline">Explore</span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fa fa-bell wd-hollow"></i>
+            <span class="d-none d-xl-inline">Notifications</span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fa fa-envelope wd-hollow"></i>
+            <span class="d-none d-xl-inline">Messages</span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fa fa-bookmark wd-hollow"></i>
+            <span class="d-none d-xl-inline">Bookmarks</span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fa fa-fire wd-hollow"></i>
+            <span class="d-none d-xl-inline">Top Articles</span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fa fa-user wd-hollow"></i>
+            <span class="d-none d-xl-inline">Profile</span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action override-nav-bs">
+            <i class="fa fa-ellipsis-h wd-hollow"></i>
+            <span class="d-none d-xl-inline">More</span>
+          </a>
+        </div>
+        <button class="btn btn-primary override-bs w-100 rounded-pill">Tweet</button>
     </div>
-    <div class="wd-col-one-sixth-page">
-      <a href="" class="wd-default-font-color">Trending</a>
+    <!-- create the main content -->
+    <div class="col-sm-10 col-md-10 col-lg-7 col-xl-6 mb-2 pt-2">
+      <!-- create search bar -->
+      <div class="row">
+        <div class="col-10 position-relative">
+          <div class="wd-search">
+            <i class="fa fa-search wd-tuitter-grey"></i>
+            <input type="text" class="form-control rounded-pill text-secondary" placeholder="Search Tuitter">
+          </div>
+        </div>
+        <!-- gear -->
+        <div class="col-1 ps-0 m-auto">
+          <a class="wd-search-gear-icon" href="explore-settings.html">
+            <i class="fa fa-cog float-end wd-hollow"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Navigating Tab -->
+      <ul class="nav pt-2">
+        <li class="nav-item">
+          <a class="nav-link active override-nav-active-bs" href="#"><span>For you</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-secondary" href="#">Trending</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-secondary" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-secondary" href="#">Sports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-none d-md-block text-secondary" href="#">Entertainment</a>
+        </li>
+      </ul>
+
+      <!-- create center image -->
+      <div class="position-relative pt-1">
+        <img alt="starship" src="cybertruck.webp" width="100%">
+        <div class="position-absolute bottom-0 left-0 text-white">
+          <div>Tesla earnings call • LIVE</div>
+          <h1>Tesla's Cybertruck</h1>
+        </div>
+<!--        <h1 class="position-absolute bottom-0 left-0 text-white">Tesla's Cybertruck</h1>-->
+      </div>
+
+      <!--create posts-->
+      <ul class="list-group">
+        <!--POST A-->
+        <li class="list-group-item">
+          <div class="row">
+            <!--post details-->
+            <div class="col-9">
+              <div class="text-secondary">Trending in science</div>
+              <div class="fw-bold">SpaceX <i class="fa fa-check-circle wd-tuitter-yellow"></i><span class="text-secondary fw-normal"> - 3h </span></div>
+              <div class="fw-bold">Starship is a fully-reusable super heavy-lift launch vehicle under development by SpaceX.
+                Standing 120 m tall and with more than twice the thrust of the Saturn V.</div>
+            </div>
+            <!--post diagram-->
+            <div class="col-3 my-auto mx-auto">
+              <img class="float-end rounded" src="TSLA.jpeg" height="100px" width="100px" alt="tesla">
+            </div>
+          </div>
+        </li>
+        <!--POST B-->
+        <li class="list-group-item">
+          <div class="row">
+            <!--post details-->
+            <div class="col-9">
+              <div class="fw-bold">NYT <i class="fa fa-check-circle wd-tuitter-yellow"></i><span class="text-secondary fw-normal"> - 2h </span></div>
+              <div class="fw-bold">Didn't want to be the one that got away.Big mistake, broke the sweetest promise
+                That you never should have made
+                I'm here on the kitchen floor
+                You call, but I won't hear it
+                You said no one else, how could you do this, babe?</div>
+              <div class="text-secondary">23K Tweets</div>
+            </div>
+            <!--post diagram-->
+            <div class="col-3 my-auto mx-auto">
+              <img class="float-end rounded" src="nyt-post-pic.jpeg" height="100px" width="100px" alt="nyt-post-pic">
+            </div>
+          </div>
+        </li>
+        <!--POST C-->
+        <li class="list-group-item">
+          <div class="row">
+            <!--post details-->
+            <div class="col-9">
+              <div class="text-secondary">Trending in sports</div>
+              <div class="fw-bold">Now: Nets vs Knicks</div>
+              <div class="text-secondary">230K Tweets</div>
+            </div>
+            <!--post diagram-->
+            <div class="col-3 my-auto mx-auto">
+              <img class="float-end rounded" src="sports.webp" height="100px" width="100px" alt="sports">
+            </div>
+          </div>
+        </li>
+        <!--POST D-->
+        <li class="list-group-item">
+          <div class="row">
+            <!--post details-->
+            <div class="col-9">
+              <div class="text-secondary">COVID-19</div>
+              <div class="fw-bold">Fauci <i class="fa fa-check-circle wd-tuitter-blue"></i><span class="text-secondary fw-normal"> - 1h</span></div>
+              <div class="text-secondary">85K Tweets</div>
+            </div>
+            <!--post diagram-->
+            <div class="col-3 my-auto mx-auto">
+              <img class="float-end rounded" src="breakingnews.jpeg" height="100px" width="100px" alt="tesla">
+            </div>
+          </div>
+        </li>
+        <!--POST E with format in the challenge section-->
+        <li class="list-group-item">
+          <div class="row">
+            <!--post details-->
+            <div class="col-11">
+              <div class="text-secondary">Trending in Politics</div>
+              <div class="fw-bold">Matrix</div>
+              <div class="text-secondary">Trending with
+                <span class="wd-tuitter-blue">Neo</span>,
+                <span class="wd-tuitter-blue">Neo</span>
+              </div>
+            </div>
+            <!--post diagram-->
+            <div class="col-1 my-10 mx-auto">
+              <i class="fa fa-ellipsis-h"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="wd-col-one-sixth-page">
-      <a href="" class="wd-default-font-color">COVID-19</a>
+
+    <!--create the follow sidebar-->
+    <div class="col-lg-4 col-xl-4 d-none d-lg-block pt-2">
+      <ul class="list-group">
+        <li class="list-group-item override-follow-bs fw-bold fs-5">Who to follow</li>
+
+        <li class="list-group-item override-follow-bs">
+          <div class="row">
+            <div class="col-2">
+              <img class="rounded-circle" src="./nyt.png" height="50px" width="50px" alt="newyork-times">
+            </div>
+            <div class="col-7">
+              <div class="fw-bold">NYT <i class="fa fa-check-circle wd-tuitter-yellow"></i></div>
+              <div>@newyorktimes</div>
+            </div>
+            <div class="col-3">
+              <button class="btn rounded-pill text-light bg-dark float-end">Follow</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item override-follow-bs">
+          <div class="row">
+            <div class="col-2">
+              <img class="rounded-circle" src="./TSLA.jpeg" height="50px" width="50px" alt="tesla">
+            </div>
+            <div class="col-7">
+              <div class="fw-bold">Tesla <i class="fa fa-check-circle wd-tuitter-yellow"></i></div>
+              <div>@tesla</div>
+            </div>
+            <div class="col-3">
+              <button class="btn rounded-pill text-light bg-dark float-end">Follow</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item override-follow-bs">
+          <div class="row">
+            <div class="col-2">
+              <img class="square rounded" src="../doge.jpg" height="50px" width="50px" alt="doge" >
+            </div>
+            <div class="col-7">
+              <div class="fw-bold">
+                Doge <i class="fa fa-check-circle wd-tuitter-blue"></i></div>
+              <div>@doge</div>
+            </div>
+            <div class="col-3">
+              <button class="btn rounded-pill text-light bg-dark float-end">Follow</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-10">
+              <div class="text-secondary fw-light wd-promotion-size">
+                <span class="fa-stack wd-promotion-size">
+                    <i class="fas fa-square fa-stack-2x"></i>
+                    <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+                </span>
+                Promoted</div>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item override-follow-bs">
+          <a href="#" class="wd-remove-underline">
+            <span class="wd-tuitter-blue">Show more</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="row">
+        <span>
+          <a class="text-secondary wd-terms-bs" href="#">Terms of Service &nbsp &nbsp</a>
+          <a class="text-secondary wd-terms-bs" href="#">Privacy Policy &nbsp &nbsp</a>
+          <a class="text-secondary wd-terms-bs" href="#">Cookie Policy &nbsp &nbsp</a>
+        </span>
+        <span>
+          <a class="text-secondary wd-terms-bs" href="#">Accessibility &nbsp &nbsp</a>
+          <a class="text-secondary wd-terms-bs" href="#">Ads info &nbsp &nbsp</a>
+          <a class="text-secondary wd-terms-bs" href="#">More... &nbsp &nbsp</a>
+        </span>
+        <a class="text-secondary wd-terms-bs" href="#"><i class="fa fa-copyright"></i> 2023 Tuiter, Inc. </a>
+      </div>
     </div>
-    <div class="wd-col-one-sixth-page">
-      <a href="" class="wd-default-font-color">News</a>
-    </div>
-    <div class="wd-col-one-sixth-page">
-      <a href="" class="wd-default-font-color">Sports</a>
-    </div>
-    <div class="wd-col-one-sixth-page">
-      <a href="" class="wd-default-font-color">Entertainment</a>
-    </div>
   </div>
-  <br><br>
-</div>
-<div class="wd-gap"></div>
-
-<!--Suggested Post-->
-<!--No images post Part C-->
-<div class="wd-row">
-  <div class="wd-border wd-col-whole-page">
-    <span class="wd-topic-style">Trending in science</span><br>
-    <span class="wd-title-style"><b>Starship</b></span><br>
-    <span class="wd-topic-style">55.5K Tweets</span>
   </div>
-  <div class="wd-border wd-col-whole-page">
-    <span class="wd-topic-style">Sports Trending</span><br>
-    <span class="wd-title-style"><b>Joe Rogan</b></span><br>
-    <span class="wd-topic-style">5,218K Tweets</span>
-  </div>
-</div>
-
-<!--With image post Part D-->
-<div class="wd-border wd-flex-container-between">
-  <div>
-    <img class="wd-avatar-icon" src="nyt.png" alt="nyt-icon">
-    <span class="wd-author-style">The New York Times</span>
-    <img class="wd-blue-checkmark" src="bluecheck.png" alt="blue-check">
-    <span class="wd-time-style"> · Yesterday </span><br>
-    <span class="wd-title-style"><b>Didn't want to be the one that got away.</b></span><br>
-  </div>
-  <div>
-    <img class="wd-post-image" src="nyt-post-pic.jpeg" alt="nyt-post-pic">
-  </div>
-</div>
-
-<div class="wd-border wd-flex-container-between">
-  <div>
-    <img class="wd-avatar-icon" src="TSLA.jpeg" alt="tsla-icon">
-    <span class="wd-author-style">Tesla</span>
-    <img class="wd-blue-checkmark" src="bluecheck.png" alt="blue-check">
-    <span class="wd-time-style"> · Today </span><br>
-    <span class="wd-title-style"><b>CyberTruck on the way!</b></span><br>
-  </div>
-  <div>
-    <img class="wd-post-image" src="cybertruck.webp" alt="tsla-post-pic">
-  </div>
-</div>
-
-<!--With image post Part E without author-->
-<div class="wd-border wd-flex-container-between">
-  <div>
-    <span class="wd-topic-style">COVID-19</span>
-    <span class="wd-time-style"> · LIVE </span><br>
-    <span class="wd-title-style"><b>COVID-19: Breaking News</b></span><br>
-  </div>
-  <div>
-    <img class="wd-post-image" src="breakingnews.jpeg" alt="breaking-news-image">
-  </div>
-</div>
-
-<div class="wd-border wd-flex-container-between">
-  <div>
-    <span class="wd-topic-style">Sports</span>
-    <span class="wd-time-style"> · LIVE </span><br>
-    <span class="wd-title-style"><b>Now: Nets vs Knicks</b></span><br>
-  </div>
-  <div>
-    <img class="wd-post-image" src="sports.webp" alt="sports-image">
-  </div>
-</div>
-
 </body>
 </html>
