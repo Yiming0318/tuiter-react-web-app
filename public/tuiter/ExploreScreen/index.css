@@ -76,8 +76,8 @@
 
 .wd-hollow{
   color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(110, 118, 125);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #495057;
 }
 
 
