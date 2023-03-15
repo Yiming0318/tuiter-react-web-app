@@ -1,7 +1,7 @@
 import React from "react";
 import postsArray from './posts.json';
 import PostItem from "./postItem";
-import who from '../who-to-follow-list/who.json'
+import who from '../data/who.json'
 
 const PostList = () => {
   return(

@@ -1,13 +1,13 @@
 import React from "react";
-
-import PostList from "../post-list";
-import NavigationSidebar from "../navigation-sidebar";
-import PostSummaryList from "../post-summary-list";
+import WhatsHappening from "./whats-happening";
+import TuitsList from "../tuits-list";
 
 const HomeComponent = () => {
   return (
       <>
-        <PostList/>
+        <h4>Home</h4>
+        <WhatsHappening/>
+        <TuitsList/>
       </>
   )
 }
