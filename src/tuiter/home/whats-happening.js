@@ -12,9 +12,6 @@ const WhatsHappening = () => {
     "handle": "@naruto",
     "image": "naruto.jpg",
     "topic": "Life",
-    "time": "1h",
-    "replies": 0,
-    "retuits": 0,
   };
   const dispatch = useDispatch();
   const tuitClickHandler = () => {
